@@ -46,7 +46,8 @@ gem 'deep-cloning'
 2. **Trigger Cloning**: To replicate a model and its associations, simply call the `DeepCloning::Clone.new(@model_instance, opts).replicate` method on the desired model instance.
 
 ```rb
-# @root_item and @target_item should be both already created into the system
+# @root_item should be already created and is the item to be copied
+# @target_item should be already created and is the item which will receive the @root_item hierarchy children to be copied
 
 DeepCloning::Clone.new(@root_item, opts).replicate do |source, destiny, moment|
   case moment
