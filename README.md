@@ -43,7 +43,7 @@ Modern applications often require the ability to create copies of database hiera
 gem 'deep-cloning'
 ```
 
-2. **Trigger Cloning**: To replicate a model and its associations, simply call the `DeepCloning::Clone.new(@model_instance, opts).replicate` method on the desired model instance.
+2. **Trigger Cloning**: To replicate a model and its associations, simply call the `DeepCloning::Clone.new(@root_item, opts).replicate` method on the desired model instance root item.
 
 ```rb
 # @root_item should be already created and is the item to be copied
